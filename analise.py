@@ -24,5 +24,9 @@ df['Resultado_ra226'] = pd.to_numeric(df['Resultado_ra226'], errors='coerce')
 # Contar quantos valores são <= 8
 qtd = (df['Resultado_ra226'] <= 8).sum()
 # %%
-print("Quantidade de valores <= 8:", qtd)
+print("Quantidade de valores <= 8:", qtd, "Unidades.")
+# %%
+Ra226_menor_8 = ((df['Resultado_ra226'] > 1) & (df['Resultado_ra226'] <= 8)).sum()
+# %%
+Ra226_menor_8
 # %%
